@@ -1,0 +1,49 @@
+.btn {
+  margin: 0 auto;
+  padding: 11px 30px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--gray);
+  color: var(--gray);
+  border-radius: 5px;
+  font-size: 13px;
+  transition: all .3s;
+}
+
+.btn_search {
+  padding: 11px 20px;
+  height: 40px;
+  display: block;
+  background: transparent;
+  border: 1px solid var(--gray);
+  color: var(--gray);
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+
+.active {
+  border: 1px solid var(--orange-main);
+  color: var(--orange-main);
+}
+
+
+.btn-long {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-save {
+  border: 1px solid var(--orange-main);
+  color: var(--orange-main);
+}
+
+.deactive {
+  border: 1px solid var(--gray);
+  color: var(--gray);
+}
+
+.btn-clear {
+  border: 1px solid var(--red);
+  color: var(--red);
+}

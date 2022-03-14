@@ -1,0 +1,12 @@
+.heading_main {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 25px;
+}
+
+.subheading {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 35px 0 10px 0;
+  color: var(--gray);
+}
