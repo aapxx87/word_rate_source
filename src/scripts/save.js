@@ -32,6 +32,7 @@ const deleteBtnClass = function () {
 }
 
 
+
 const search_item = function (word) {
 
   saved_list.forEach(function (el, idx) {
