@@ -18,11 +18,14 @@
   color:var(--gray);
 }
 
+.tr-sentence {
+  padding-right: 15px;
+  padding-bottom: 0;
+
+}
+
 
 .delete_item_btn {
-  /* position: absolute;
-  top: -5px;
-  right: 10px; */
   font-size: 21px;
   font-weight: 300;
   color: var(--red);
