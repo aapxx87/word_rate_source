@@ -73,6 +73,10 @@ const createHTML = function (arr) {
     </table>
   </div>
 
+        <div>
+          <textarea name="" id="" cols="30" rows="1" class="textarea" placeholder="Enter origin sentence"></textarea>
+        </div>
+
   <div>
     <input type="text" class="input input_translate" placeholder="Enter translation">
   </div>
@@ -91,6 +95,17 @@ const createHTML = function (arr) {
 const render = function (word_income) {
 
   createHTML(create_result_arr(normalize_word_query(word_income)))
+
+  var textarea = document.getElementsByTagName('textarea')[0];
+
+  textarea.addEventListener('paste', resize);
+
+  function resize() {
+    var el = this;
+    setTimeout(function () {
+      el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    }, 1);
+  }
 
   // функция для сохранения резузльтатов, см в файле save.js
   btn_save_script(create_result_arr(normalize_word_query(word_income)))
@@ -160,3 +175,5 @@ input.oninput = function () {
 
 
 input.focus()
+
+

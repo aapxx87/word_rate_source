@@ -32,6 +32,7 @@ const deleteBtnClass = function () {
 }
 
 
+
 const search_item = function (word) {
 
   saved_list.forEach(function (el, idx) {
@@ -59,11 +60,14 @@ export const btn_save_script = function (result_arr) {
 
   const input_translate = document.querySelector('.input_translate')
 
+  const input_sentence = document.querySelector('.textarea')
+
   btn_save.addEventListener('click', function () {
 
     const obj_item = {
       eng_words: result_arr,
-      rus_translate: input_translate.value
+      rus_translate: input_translate.value,
+      origin_sentence: input_sentence.value
     }
 
     saved_list.push(obj_item)
@@ -76,6 +80,11 @@ export const btn_save_script = function (result_arr) {
     btn_save.disabled = true
     btn_save.classList.add('deactive')
     input_translate.value = ''
+    input_sentence.value = ''
+
+    input_sentence.style.height = '40px'
+
+
 
     const btnDelete = document.querySelector('.delete_item_btn')
 
@@ -124,6 +133,11 @@ const createHTML = function (array) {
     })
 
     rus = `
+    <tr>
+      <td colspan="3" class="tr_translate tr-sentence">
+        <span class="full_sentence">${el.origin_sentence}</span>
+      </td>
+    </tr>
     <tr>
      <td colspan="3" class="tr_translate">
       ${btn_delete}
