@@ -32,19 +32,20 @@ ul {
   border-spacing: 13px;
   border: 1px solid var(--gray);
   border-radius: 5px;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .table thead {
   text-align: left;
   font-size: 16px;
   color: var(--orange-main);
+  border-bottom: 1px solid var(--orange-main);
 }
 
 .table tbody {
   text-align: left;
   padding-top: 10px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
 }
 

@@ -9,6 +9,12 @@
   margin-bottom: 40px;
   padding-bottom: 10px;
   position: relative;
+  padding-left: 20px;
+}
+
+.tr_last_item {
+  padding-bottom: 25px;
+  padding-left: 20px;
 }
 
 .rus_text {
