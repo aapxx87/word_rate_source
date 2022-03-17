@@ -23,14 +23,32 @@ body {
   background: #202124;
   color: var(--gray-light);
   font-family: 'Roboto', sans-serif;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow: auto;
 }
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+
 
 
 .container {
-  max-width: 350px;
+  max-width: 370px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 40px; 
 }
+
+
+
+
 
 
 
