@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word frequency</title>
+</head>
+
+<body>
+
+
+  <div class="container" id="app">
+
+    <div class="main_container">
+
+      <!-- Контейнер заголовка -->
+      <div class="heading_main">
+        <p class="app_title_text">Word Frequency Counter</p>
+      </div>
+
+
+      <div class="subheading">
+        <p class="subheading_text">Search</p>
+      </div>
+
+      <!-- Контейнер поиска -->
+      <div class="search_box">
+
+        <div>
+          <input type="text" class="input" placeholder="Enter word">
+        </div>
+
+        <div>
+          <button class="btn btn_search">Search</button>
+        </div>
+
+      </div>
+
+
+
+
+      <!-- Контейнер с выводом результата поиска -->
+      <div class="result_box">
+
+        <div class="subheading">
+          <p class="subheading_text">Result</p>
+        </div>
+
+        <div class="table_box">
+
+          <table class="table">
+
+            <thead>
+              <th>Word</th>
+              <th>Rank</th>
+              <th>PoS</th>
+            </thead>
+
+            <tbody class="tbody">
+
+              <tr>
+                <td class="td_long">substantial</td>
+                <td class="td_medium">4001</td>
+                <td class="td_pos">j</td>
+              </tr>
+
+              <tr>
+                <td class="td_long">encorage</td>
+                <td class="td_medium">1301</td>
+                <td class="td_pos">n</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+        <div>
+          <input type="text" class="input input_translate" placeholder="Enter translation">
+        </div>
+
+        <div>
+          <button class="btn btn-long btn-save">Save</button>
+        </div>
+
+      </div>
+
+
+
+      <!-- Конейнер сохранения слов -->
+      <div class="save_box">
+
+        <div class="subheading">
+          <p class="subheading_text">Saved list</p>
+        </div>
+
+
+        <div class="table_box">
+
+          <table class="table table-save">
+
+            <thead>
+              <th>Word</th>
+              <th>Rank</th>
+              <th>PoS</th>
+            </thead>
+
+            <tbody class="tbody">
+
+              <tr>
+                <td class="td_long">name</td>
+                <td class="td_medium">301</td>
+                <td class="td_pos">n</td>
+              </tr>
+
+              <tr>
+                <td colspan="3" class="tr_translate">
+                  <span class="delete_item_btn">x</span>
+                  <span class="rus_text">имя, погода, вещество</span>
+                  <!-- <div class="delete_item_btn">x</div> -->
+                </td>
+              </tr>
+
+              <tr>
+                <td class="td_long">substantial</td>
+                <td class="td_medium">4001</td>
+                <td class="td_pos">j</td>
+              </tr>
+
+              <tr>
+                <td colspan="3" class="tr_translate"> <span class="delete_item_btn">x</span><span
+                    class="rus_text">вещество</span></td>
+              </tr>
+
+              <tr>
+                <td class="td_long">assambler</td>
+                <td class="td_medium">3476</td>
+                <td class="td_pos">j</td>
+              </tr>
+
+              <tr>
+                <td colspan="3" class="tr_translate"> <span class="delete_item_btn">x</span><span class="rus_text">имя,
+                    погода</span></td>
+              </tr>
+
+              <tr>
+                <td class="td_long">encorage</td>
+                <td class="td_medium">1301</td>
+                <td class="td_pos">n</td>
+              </tr>
+
+              <tr>
+                <td colspan="3" class="tr_translate"> <span class="delete_item_btn">x</span><span
+                    class="rus_text">погода, вещество</span></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+        <div>
+          <button class="btn btn-long btn-clear">Clear list</button>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="index.js"></script>
+  <script src="word_freq_base.js"></script>
+
+
+</body>
+
+</html>
