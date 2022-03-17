@@ -139,7 +139,7 @@ const createHTML = function (array) {
       </td>
     </tr>
     <tr>
-     <td colspan="3" class="tr_translate">
+     <td colspan="3" class="tr_translate tr_last_item">
       ${btn_delete}
       <span class="rus_text">${el.rus_translate}</span>
      </td>
