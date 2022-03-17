@@ -56,6 +56,7 @@ const search_item = function (word) {
 
 export const btn_save_script = function (result_arr) {
 
+
   const btn_save = document.querySelector('.js-btn-save')
 
   const input_translate = document.querySelector('.input_translate')
@@ -97,6 +98,37 @@ export const btn_save_script = function (result_arr) {
 
 
   })
+
+}
+
+
+
+
+
+const input_translate = document.querySelector('.input_translate')
+const input_sentence = document.querySelector('.textarea')
+const btn_save = document.querySelector('.js-btn-save')
+
+
+
+input_translate.oninput = function () {
+
+  if (input_translate.value.length > 3 && input_sentence.value.length > 3) {
+    btn_save.classList.add('active')
+  } else {
+    btn_save.classList.remove('active')
+  }
+
+}
+
+
+input_sentence.oninput = function () {
+
+  if (input_translate.value.length > 3 && input_sentence.value.length > 3) {
+    btn_save.classList.add('active')
+  } else {
+    btn_save.classList.remove('active')
+  }
 
 }
 

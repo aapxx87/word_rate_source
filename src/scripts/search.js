@@ -110,6 +110,8 @@ const render = function (word_income) {
   // функция для сохранения резузльтатов, см в файле save.js
   btn_save_script(create_result_arr(normalize_word_query(word_income)))
 
+
+
 }
 
 
@@ -175,5 +177,8 @@ input.oninput = function () {
 
 
 input.focus()
+
+
+
 
 
