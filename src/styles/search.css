@@ -10,38 +10,7 @@
 }
 
 
-.input {
-  padding: 10px 20px;
-  height: 40px;
-  background-color: transparent;
-  border: 1px solid var(--gray);
-  outline: none;
-  color: #BDC1C6;
-  font-size: 16px;
-  border-radius: 5px;
-}
 
-.input_search {
-  width: 255px;
-}
-
-.input_translate {
-  width: 100%;
-  margin-top: 10px;
-}
-
-.textarea {
-  width: 100%;
-  padding: 10px 20px;
-  background-color: transparent;
-  border: 1px solid var(--gray);
-  outline: none;
-  color: #BDC1C6;
-  font-size: 16px;
-  border-radius: 5px;
-  margin-top: 10px;
-  resize: none;
-}
 
 
 

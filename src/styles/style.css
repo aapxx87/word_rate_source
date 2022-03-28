@@ -4,6 +4,7 @@
 @import url(./save.css);
 @import url(./buttons.css);
 @import url(./typography.css);
+@import url(./inputs.css);
 
 :root {
   --orange-main: darkgoldenrod;
@@ -26,11 +27,28 @@ body {
 }
 
 
+::-webkit-scrollbar { display: none; }
+
+
+
+
+
+
 .container {
-  max-width: 350px;
+  max-width: 370px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 40px; 
 }
+
+@media screen and (max-width: 768px){
+  ::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+}
+
+
+
+
 
 
 

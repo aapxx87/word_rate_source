@@ -1,3 +1,5 @@
+/* --- Buttons general --- */
+
 .btn {
   margin: 0 auto;
   padding: 11px 30px;
@@ -9,9 +11,12 @@
   font-size: 13px;
   transition: all .3s;
 }
+   
+
+/* -- btn search */
 
 .btn_search {
-  padding: 11px 20px;
+  padding: 11px 30px;
   height: 40px;
   display: block;
   background: transparent;
@@ -21,21 +26,32 @@
   font-size: 13px;
 }
 
-
 .active {
   border: 1px solid var(--orange-main);
   color: var(--orange-main);
+  background-color: rgba(184, 134, 11, 0.1);
 }
 
+
+
+
+/* -- btn save */
+
+.btn-save {
+  border: 1px solid var(--orange-main);
+  color: var(--orange-main);
+  /* background-color: rgba(184, 134, 11, 0.1); */
+}
 
 .btn-long {
   width: 100%;
   margin-top: 10px;
 }
 
-.btn-save {
+.btn-save:hover {
   border: 1px solid var(--orange-main);
   color: var(--orange-main);
+  background-color: rgba(184, 134, 11, 0.3);
 }
 
 .deactive {
@@ -43,7 +59,18 @@
   color: var(--gray);
 }
 
+
+/* -- btn clear */
+
 .btn-clear {
   border: 1px solid var(--red);
+  color: var(--red);
+  background: rgba(255, 126, 126, 0.1);
+}
+
+
+.btn-clear:hover {
+  border: 1px solid var(--red);
+  background: rgba(255, 126, 126, 0.3);
   color: var(--red);
 }

@@ -110,6 +110,10 @@ const render = function (word_income) {
   // функция для сохранения резузльтатов, см в файле save.js
   btn_save_script(create_result_arr(normalize_word_query(word_income)))
 
+
+  active_color_btn_save()
+
+
 }
 
 
@@ -132,9 +136,6 @@ btn_search.addEventListener('click', function () {
 
   input.value = ''
 
-  // const input_translate = document.querySelector('.input_translate')
-
-  // input_translate.focus()
 
 })
 
@@ -175,5 +176,41 @@ input.oninput = function () {
 
 
 input.focus()
+
+
+const active_color_btn_save = function () {
+
+
+  const input_translate = document.querySelector('.input_translate')
+  const input_sentence = document.querySelector('.textarea')
+  const btn_save = document.querySelector('.js-btn-save')
+
+
+
+  input_translate.oninput = function () {
+
+    if (input_translate.value.length > 3 && input_sentence.value.length > 3) {
+      btn_save.classList.add('active')
+    } else {
+      btn_save.classList.remove('active')
+    }
+
+  }
+
+
+  input_sentence.oninput = function () {
+
+    if (input_translate.value.length > 3 && input_sentence.value.length > 3) {
+      btn_save.classList.add('active')
+    } else {
+      btn_save.classList.remove('active')
+    }
+
+  }
+
+}
+
+
+
 
 
