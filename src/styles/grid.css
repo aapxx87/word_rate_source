@@ -32,11 +32,15 @@
 
 
 
-.save_container .table_box_grid:nth-child(even) {
+.save_container .table_box_grid:nth-child(odd) {
   background-color: #27282b;
 } 
 
 .save_container {
   border: 1px solid var(--gray);
   border-radius: 5px;
+}
+
+#header {
+  background-color: #202124;
 }
