@@ -41,52 +41,43 @@ const createHTML = function (arr) {
   arr.forEach(function (el) {
 
     markup = markup + `
-      <tr>
-        <td class="td_long">${el.Column2}</td>
-        <td class="td_medium">${el["word-freq-top5000"]}</td>
-        <td class="td_pos">${el.Column3}</td>
-      </tr>
+      <div class="grid_cell cell_content">${el.Column2}</div>
+      <div class="grid_cell cell_content">${el["word-freq-top5000"]}</div>
+      <div class="grid_cell grid_cell-right cell_content">${el.Column3}</div>
     `
 
   })
 
 
-  const tbody = `
-    <tbody class="tbody">
+  const result_html = `
+    <div class="subheading">
+      <p class="subheading_text">Result</p>
+    </div>
+
+    <div class="table_box_grid">
+
+      <div class="grid_cell cell_head">Word</div>
+      <div class="grid_cell cell_head">Rank</div>
+      <div class="grid_cell grid_cell-right cell_head">PoS</div>
+
       ${markup}
-    </tbody>
+    
+    </div>
+
+    <div>
+      <textarea name="" id="" cols="30" rows="1" class="textarea" placeholder="Enter origin sentence"></textarea>
+    </div>
+    
+    <div>
+      <input type="text" class="input input_translate" placeholder="Enter translation">
+    </div>
+
+    <div>
+      <button class="btn btn-long btn-save js-btn-save">Save</button>
+    </div>
   `
 
-  const thead = `
-  <div class="subheading">
-    <p class="subheading_text">Result</p>
-  </div>
-
-  <div class="table_box">
-    <table class="table">
-      <thead>
-      <th>Word</th>
-      <th>Rank</th>
-      <th>PoS</th>
-      </thead>
-      ${tbody}
-    </table>
-  </div>
-
-        <div>
-          <textarea name="" id="" cols="30" rows="1" class="textarea" placeholder="Enter origin sentence"></textarea>
-        </div>
-
-  <div>
-    <input type="text" class="input input_translate" placeholder="Enter translation">
-  </div>
-
-  <div>
-    <button class="btn btn-long btn-save js-btn-save">Save</button>
-  </div>
-  `
-
-  result_box.insertAdjacentHTML('afterbegin', thead)
+  result_box.insertAdjacentHTML('afterbegin', result_html)
 
 
 }
