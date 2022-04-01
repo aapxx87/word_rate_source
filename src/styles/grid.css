@@ -1,0 +1,42 @@
+/* * RESULT BOX */
+
+.table_box_grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 50px;
+  gap: 10px;
+  padding: 18px;
+}
+
+.result_box .table_box_grid {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+
+.grid_cell-right {
+  text-align: center;
+  padding-left: 5px;
+}
+
+
+.cell_head {
+  color: var(--orange-main);
+  font-weight: 600;
+}
+
+
+/* * SAVE BOX */
+
+.grid_3_of_3 {
+  grid-column: 1/ span 3;
+}
+
+
+
+.save_container .table_box_grid:nth-child(even) {
+  background-color: #27282b;
+} 
+
+.save_container {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}

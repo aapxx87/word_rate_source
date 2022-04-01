@@ -41,14 +41,232 @@
       </div>
 
 
-
       <!-- Контейнер с выводом результата поиска -->
-      <div class="result_box"></div>
-
+      <!-- <div class="result_box"></div> -->
 
 
       <!-- Конейнер сохранения слов -->
-      <div class="save_box"></div>
+      <!-- <div class="save_box"></div> -->
+
+
+
+      <!-- * ASSETS MARKUP -->
+
+      <!-- + Grid -->
+
+      <div class="result_box">
+
+        <div class="subheading">
+          <p class="subheading_text">Result</p>
+        </div>
+
+        <!-- ! Grid start -->
+
+        <div class="table_box_grid">
+
+          <div class="grid_cell cell_head">Word</div>
+          <div class="grid_cell cell_head">Rank</div>
+          <div class="grid_cell grid_cell-right cell_head">PoS</div>
+
+          <div class="grid_cell cell_content">substantial</div>
+          <div class="grid_cell cell_content">4001</div>
+          <div class="grid_cell grid_cell-right cell_content">j</div>
+
+          <div class="grid_cell cell_content">encorage</div>
+          <div class="grid_cell cell_content">1301</div>
+          <div class="grid_cell grid_cell-right cell_content">n</div>
+
+        </div>
+
+        <!-- ! Grid end -->
+
+        <div>
+          <input type="text" class="input input_translate" placeholder="Enter translation">
+        </div>
+
+        <div>
+          <textarea name="" id="" cols="30" rows="1" class="textarea" placeholder="Enter origin sentence"></textarea>
+        </div>
+
+        <div>
+          <button class="btn btn-long btn-save js-btn-save">Save</button>
+        </div>
+
+      </div>
+
+
+      <!-- Конейнер сохранения слов -->
+      <div class="save_box">
+
+        <div class="subheading">
+          <p class="subheading_text">Saved list</p>
+        </div>
+
+        <!-- ! GRID start -->
+
+        <div class="save_container">
+
+          <div class="table_box_grid">
+
+            <div class="grid_cell cell_head">Word</div>
+            <div class="grid_cell cell_head">Rank</div>
+            <div class="grid_cell grid_cell-right cell_head">PoS</div>
+
+          </div>
+
+          <!-- item 1 -->
+
+          <div class="table_box_grid save">
+
+            <div class="grid_cell cell_content">name</div>
+            <div class="grid_cell cell_content">401</div>
+            <div class="grid_cell grid_cell-right cell_content">j</div>
+
+            <div class="grid_cell cell_content">name</div>
+            <div class="grid_cell cell_content">3098</div>
+            <div class="grid_cell grid_cell-right cell_content">v</div>
+
+            <div class="grid_3_of_3 tr_translate tr-sentence">
+              <span class="full_sentence">Good directors not only possess strong
+                analytical skills themselves but also can harness the analytical power and life experiences of their
+                staff members. they must be able to turn that vision into clear directives that the staff can
+                implement.</span>
+            </div>
+
+            <div class="grid_3_of_3 tr_translate">
+              <div class="delete_item_box">
+                <div class="rus_text">имя, погода, вещество</div>
+                <div class="delete_item_btn">del</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- item 2 -->
+
+          <div class="table_box_grid">
+
+            <div class="grid_cell cell_content">substantial</div>
+            <div class="grid_cell cell_content">7834</div>
+            <div class="grid_cell grid_cell-right cell_content">v</div>
+
+            <div class="grid_3_of_3 tr_translate tr-sentence">
+              <span class="full_sentence">People tend to think of creativity as a mysterious solo act, and they
+                typically
+                reduce products to a single idea.</span>
+            </div>
+
+            <div class="grid_3_of_3 tr_translate">
+              <div class="delete_item_box">
+                <div class="rus_text">вещество</div>
+                <div class="delete_item_btn">del</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- item 3 -->
+
+          <div class="table_box_grid">
+
+            <div class="grid_cell cell_content">assambler</div>
+            <div class="grid_cell cell_content">3476</div>
+            <div class="grid_cell grid_cell-right cell_content">v</div>
+
+            <div class="grid_3_of_3 tr_translate tr-sentence">
+              <span class="full_sentence">People tend to think of creativity as a mysterious solo act, and they
+                typically
+                reduce products to a single idea</span>
+            </div>
+
+            <div class="grid_3_of_3 tr_translate">
+              <div class="delete_item_box">
+                <div class="rus_text">имя, погода</div>
+                <div class="delete_item_btn">del</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- item 4 -->
+
+          <div class="table_box_grid">
+
+            <div class="grid_cell cell_content">encorage</div>
+            <div class="grid_cell cell_content">3476</div>
+            <div class="grid_cell grid_cell-right cell_content">v</div>
+
+            <div class="grid_3_of_3 tr_translate tr-sentence">
+              <span class="full_sentence">People tend to think of creativity as a mysterious solo act, and they
+                typically
+                reduce products to a single idea</span>
+            </div>
+
+            <div class="grid_3_of_3 tr_translate">
+              <div class="delete_item_box">
+                <div class="rus_text">имя, погода, вещество</div>
+                <div class="delete_item_btn">del</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- item 5 -->
+
+          <div class="table_box_grid">
+
+            <div class="grid_cell cell_content">vital</div>
+            <div class="grid_cell cell_content">2939</div>
+            <div class="grid_cell grid_cell-right cell_content">v</div>
+
+            <div class="grid_3_of_3 tr_translate tr-sentence">
+              <span class="full_sentence">the ability to unlearn, learn, and relearn is vital for long-term
+                success.</span>
+            </div>
+
+            <div class="grid_3_of_3 tr_translate">
+              <div class="delete_item_box">
+                <div class="rus_text">имя, погода, вещество</div>
+                <div class="delete_item_btn">del</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- item 6 -->
+
+          <div class="table_box_grid">
+
+            <div class="grid_cell cell_content">intersection</div>
+            <div class="grid_cell cell_content">3045</div>
+            <div class="grid_cell grid_cell-right cell_content">v</div>
+
+            <div class="grid_3_of_3 tr_translate tr-sentence">
+              <span class="full_sentence">i am making art in the intersection between drawing and algorithms</span>
+            </div>
+
+            <div class="grid_3_of_3 tr_translate tr_last_item">
+              <div class="delete_item_box">
+                <div class="rus_text">точка пересечения</div>
+                <div class="delete_item_btn">del</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ! GRID end -->
+
+        <div>
+          <button class="btn btn-long btn-clear">Clear list</button>
+        </div>
+
+      </div>
+
+
+
 
 
 
