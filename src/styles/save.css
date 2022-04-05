@@ -17,7 +17,15 @@
   padding: 5px 10px;
   color: gray;
   display: inline-block;
+  transition: .3s;
 }
+
+.rus_text:hover {
+  border: 1px solid var(--orange-main);
+  color: var(--orange-main);
+}
+
+
 
 .tr-sentence {
   padding-right: 10px;
