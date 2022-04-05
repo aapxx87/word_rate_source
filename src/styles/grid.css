@@ -5,6 +5,13 @@
   grid-template-columns: 1.3fr 1fr 50px;
   gap: 10px;
   padding: 18px;
+  transition: .3s;
+  border: 1px solid transparent;
+}
+
+
+.table_box_grid:hover {
+  border: 1px solid var(--orange-main);
 }
 
 .result_box .table_box_grid {
