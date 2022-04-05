@@ -5,6 +5,9 @@
 @import url(./buttons.css);
 @import url(./typography.css);
 @import url(./inputs.css);
+@import url(./grid.css);
+
+
 
 :root {
   --orange-main: darkgoldenrod;
@@ -28,10 +31,6 @@ body {
 
 
 ::-webkit-scrollbar { display: none; }
-
-
-
-
 
 
 .container {

@@ -12,6 +12,8 @@ let saved_list = []
 let word = ''
 
 
+
+
 const deleteBtnClass = function () {
 
   let btnDelete = document.querySelectorAll('.delete_item_btn')
@@ -105,37 +107,6 @@ export const btn_save_script = function (result_arr) {
 
 
 
-// const input_translate = document.querySelector('.input_translate')
-// const input_sentence = document.querySelector('.textarea')
-// const btn_save = document.querySelector('.js-btn-save')
-
-
-
-// input_translate.oninput = function () {
-
-//   if (input_translate.value.length > 3 && input_sentence.value.length > 3) {
-//     btn_save.classList.add('active')
-//   } else {
-//     btn_save.classList.remove('active')
-//   }
-
-// }
-
-
-// input_sentence.oninput = function () {
-
-//   if (input_translate.value.length > 3 && input_sentence.value.length > 3) {
-//     btn_save.classList.add('active')
-//   } else {
-//     btn_save.classList.remove('active')
-//   }
-
-// }
-
-
-
-
-
 
 const createHTML = function (array) {
 
@@ -147,47 +118,85 @@ const createHTML = function (array) {
 
   let btn_delete = ''
 
+  let div_markup = ''
+
+  let div_grid = ''
+
   arr.forEach(function (el) {
+
+    div_markup = ''
 
     el.eng_words.forEach(function (item) {
 
+      console.log(item);
+
+
+      div_markup = div_markup + `
+      <div class="grid_cell cell_content">${item.Column2}</div>
+      <div class="grid_cell cell_content">${item["word-freq-top5000"]}</div>
+      <div class="grid_cell grid_cell-right cell_content">${item.Column3}</div>
+    `
+
+      console.log(div_markup);
+
+
       markup = markup + `
-        <tr>
-        <td class="td_long">${item.Column2}</td>
-        <td class="td_medium">${item["word-freq-top5000"]}</td>
-        <td class="td_pos">${item.Column3}</td>
-        </tr>
+        <div class="grid_cell cell_content">${item.Column2}</div>
+        <div class="grid_cell cell_content">${item["word-freq-top5000"]}</div>
+        <div class="grid_cell grid_cell-right cell_content">${item.Column3}</div>
       `
 
       btn_delete = `
-        <span class="delete_item_btn ${item.Column2}">x</span>
+        <div class="delete_item_btn ${item.Column2}">del</div>
       `
+      // console.log(markup);
     })
 
+
+
+
     rus = `
-    <tr>
-      <td colspan="3" class="tr_translate tr-sentence">
+    <div class="grid_3_of_3 tr_translate tr-sentence">
+      <span class="full_sentence">${el.origin_sentence}</span>
+    </div>
+
+    <div class="grid_3_of_3 tr_translate">
+      <div class="delete_item_box">
+        <div class="rus_text">${el.rus_translate}</div>
+        ${btn_delete}
+      </div>
+    </div>
+    `
+
+    div_grid = div_grid + `
+    <div class="table_box_grid">
+        ${div_markup}
+
+      <div class="grid_3_of_3 tr_translate tr-sentence">
         <span class="full_sentence">${el.origin_sentence}</span>
-      </td>
-    </tr>
-    <tr>
-     <td colspan="3" class="tr_translate tr_last_item">
-      ${btn_delete}
-      <span class="rus_text">${el.rus_translate}</span>
-     </td>
-    </tr>
+      </div>
+
+      <div class="grid_3_of_3 tr_translate">
+        <div class="delete_item_box">
+          <div class="rus_text">${el.rus_translate}</div>
+          ${btn_delete}
+        </div>
+      </div>
+
+    </div>
     `
 
     markup = markup + rus
 
-
-
   })
 
+  // console.log(div_grid);
+
+
   const tbody = `
-    <tbody class="tbody">
-      ${markup}
-    </tbody>
+   <div class=" save">
+      ${div_grid}
+    </div>
   `
 
   const final_markup = `
@@ -195,15 +204,17 @@ const createHTML = function (array) {
       <p class="subheading_text">Saved list</p>
     </div>
 
-    <div class="table_box">
-      <table class="table table-save">
-        <thead>
-          <th>Word</th>
-          <th>Rank</th>
-          <th>PoS</th>
-        </thead>
-        ${tbody}
-      </table>
+
+    <div class="save_container">
+
+      <div class="table_box_grid" id="header">
+        <div class="grid_cell cell_head">Word</div>
+        <div class="grid_cell cell_head">Rank</div>
+        <div class="grid_cell grid_cell-right cell_head">PoS</div>
+      </div>
+
+      ${tbody}
+
     </div>
 
     <div>
@@ -241,7 +252,7 @@ const getLocalStorage = function () {
 
   const data = JSON.parse(localStorage.getItem('list'))
 
-  console.log(data);
+  // console.log(data);
 
   if (!data) return
 
@@ -252,6 +263,11 @@ const getLocalStorage = function () {
 }
 
 getLocalStorage()
+
+
+
+
+
 
 
 
